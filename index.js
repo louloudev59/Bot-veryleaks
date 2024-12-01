@@ -3,7 +3,7 @@ const bot = new Discord.Client({ intents: 3276799, partials: [Discord.Partials.C
 bot.slashCommands = new Discord.Collection();
 bot.setMaxListeners(70);
 
-bot.login(require('./config.json').token).then(() => { console.log(`[!] — Logged in as ${bot.user.tag} (${bot.user.id})`); }).catch(() => { console.log('\x1b[31m[!] — Please configure a valid bot token\x1b[0m'); });
+bot.login(require('./config.json').token).then(() => { console.log(`[!] — Connecté à ${bot.user.tag} (${bot.user.id})`); }).catch(() => { console.log('\x1b[31m[!] — Merci de mettre un token valide\x1b[0m'); });
 
 const slashcommandHandler = require('./Handler/slashcommand.js')(bot);
 const eventdHandler = require('./Handler/Events')(bot);
